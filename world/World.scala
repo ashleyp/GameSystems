@@ -8,7 +8,7 @@ class World(name: String) {
 
   def spawnEnemy(enemy: Enemy) : Int = {
     currentEnemies :+= enemy
-    return currentEnemies.length
+    currentEnemies.length
   }
 
   def getEnemies() : Array[Enemy] = currentEnemies
