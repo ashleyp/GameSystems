@@ -9,8 +9,6 @@ import character.Player
 
 import world.World
 
-import java.io.File
-
 object TestHarness extends App {
 
 
