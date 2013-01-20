@@ -6,6 +6,9 @@ import item.Armor
 
 import character.Enemy
 import character.Player
+import character.PlayerClass
+
+import character.playerclass.WarriorClass
 
 import world.World
 
@@ -13,6 +16,12 @@ object TestHarness extends App {
 
 
   val world = new World("Wario World")
+
+
+  println("Creating warrior class for player")
+  val playerClass: PlayerClass = WarriorClass
+  println( playerClass.toString() )
+
 
   val poringBaseStats   = Map("Agility" -> 12, "Vitality" -> 5)
   val poporingBaseStats = Map("Agility" -> 16, "Vitality" -> 10)
@@ -22,7 +31,6 @@ object TestHarness extends App {
   
   val equippedWeapon = new Weapon("Sword of awesomeness.", 2000, 1, 10)
   val equippedArmor  = Map("head" -> headArmor, "chest" -> chestArmor)
-
 
   val poring   = new Enemy("Poring", poringBaseStats, null, null)
   val poporing = new Enemy("Poporing", poporingBaseStats, equippedArmor, equippedWeapon)

@@ -1,9 +1,6 @@
 package character
 
-import item.Weapon
-import item.Armor
-
-class Player(name: String, base_stats: Map[String, Int], armor: Map[String, Armor], weapon: Weapon) extends Character(name, base_stats, armor, weapon) {
+class Player(name: String, player_class: PlayerClass) extends Character(name, player_class.base_stats, player_class.armor, player_class.weapon) {
 
   override def toString() : String = "todo"
 

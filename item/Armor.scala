@@ -1,6 +1,6 @@
 package item
 
-class Armor(name: String, value: Float, defense: Int, stats: Map[String, Float]) extends Item(name, value) {
+class Armor(name: String, value: Int, defense: Int, stats: Map[String, Float]) extends Item(name, value) {
 
   override def toString() : String = { 
     "(Name: " + name  + 
