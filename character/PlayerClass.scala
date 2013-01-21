@@ -9,4 +9,6 @@ trait PlayerClass {
   val armor: Map[String, Armor]
   val base_stats: Map[String, Int]
 
+  val hpMultiplier: Int
+
 }

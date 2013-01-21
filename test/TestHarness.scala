@@ -18,10 +18,11 @@ object TestHarness extends App {
 
   val world = new World("Wario World")
 
-  val playerClass: PlayerClass = MageClass
+  val playerClass: PlayerClass = WarriorClass
   val player = new Player("Jim", playerClass)
   
-  print("Creating player: Mage class")
+  println("Creating player: Warrior class")
+  println("Hitpoints: " + player.getMaxHitPoints() )
   println( player.toString() )
 
   val poringBaseStats   = Map("Agility" -> 12, "Vitality" -> 5)

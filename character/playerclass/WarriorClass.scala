@@ -19,6 +19,9 @@ object WarriorClass extends PlayerClass {
      Map("Vitality" -> 10, "Strength" -> 10)
    }
 
+   val hpMultiplier: Int = 10
+
+
    override def toString(): String = {
      "(Weapon: " + weapon.toString() +
      ", Armor: " + armor.toString() +
