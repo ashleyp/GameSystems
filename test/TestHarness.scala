@@ -9,6 +9,7 @@ import character.Player
 import character.PlayerClass
 
 import character.playerclass.WarriorClass
+import character.playerclass.MageClass
 
 import world.World
 
@@ -17,11 +18,11 @@ object TestHarness extends App {
 
   val world = new World("Wario World")
 
-
-  println("Creating warrior class for player")
-  val playerClass: PlayerClass = WarriorClass
-  println( playerClass.toString() )
-
+  val playerClass: PlayerClass = MageClass
+  val player = new Player("Jim", playerClass)
+  
+  print("Creating player: Mage class")
+  println( player.toString() )
 
   val poringBaseStats   = Map("Agility" -> 12, "Vitality" -> 5)
   val poporingBaseStats = Map("Agility" -> 16, "Vitality" -> 10)
