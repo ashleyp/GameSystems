@@ -8,6 +8,8 @@ import character.Enemy
 import character.Player
 import character.PlayerClass
 
+import character.player.Inventory
+
 import character.playerclass.WarriorClass
 import character.playerclass.MageClass
 
@@ -15,13 +17,12 @@ import world.World
 
 object TestHarness extends App {
 
-
   val world = new World("Wario World")
 
-  val playerClass: PlayerClass = WarriorClass
-  val player = new Player("Jim", playerClass)
+  val playerClass: PlayerClass = MageClass
+  val player = new Player("Jim", playerClass, playerClass.startInventory)
   
-  println("Creating player: Warrior class")
+  println("Creating player:  Mage class")
   println("Hitpoints: " + player.getMaxHitPoints() )
   println( player.toString() )
 
@@ -43,9 +44,6 @@ object TestHarness extends App {
   val totalEnemies   = world.getEnemies().length 
   val spawnedEnemies = "\nCurrently spawned enemies (%s):\n%s".format(totalEnemies, world.enemiesToString())
   println( spawnedEnemies )
-
-  //val potion = new Potion("Potion of super heals", 150)
-  //println(potion.toString())
 
 }
 

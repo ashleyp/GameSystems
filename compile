@@ -1,1 +1,1 @@
-fsc item/*.scala test/*.scala world/*.scala character/*.scala character/playerclass/*.scala 
+fsc item/*.scala test/*.scala world/*.scala character/*.scala character/playerclass/*.scala character/player/*.scala

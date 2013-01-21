@@ -7,28 +7,28 @@ import item.Weapon
 import item.Armor
 import item.Potion
 
-object WarriorClass extends PlayerClass { 
+object MageClass extends PlayerClass { 
 
   val weapon: Weapon = {
-     new Weapon("Noob Sword", 1, 1, 2)
+     new Weapon("Noob staff", 1, 1, 1)
    }
 
    val armor: Map[String, Armor] = {
-     Map("head" -> new Armor("Noob hat", 100, 1, null))
+     Map("head" -> new Armor("Noob magical hat", 100, 1, null))
    }
 
    val base_stats: Map[String, Int] = {
-     Map("Vitality" -> 10, "Strength" -> 10)
+     Map("Vitality" -> 10, "Intelligence" -> 10)
    }
 
    val startInventory = {
      new Inventory(
-       Array(new Potion("Potion of healing", 150))
+       Array(new Potion("Potion of mana", 150))
      )
    }
 
 
-   val hpMultiplier: Int = 10
+   val hpMultiplier: Int = 2
 
    override def toString(): String = {
      "(Weapon: " + weapon.toString() +
