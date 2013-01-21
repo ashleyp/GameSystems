@@ -39,11 +39,11 @@ object TestHarness extends App {
   world.spawnEnemy( poring )
   world.spawnEnemy( poporing )
  
-  val totalEnemies = world.getEnemies().length 
-  println( "\nCurrently Spawned enemies (" + totalEnemies + "):\n" + world.enemiesToString() )
+  val totalEnemies   = world.getEnemies().length 
+  val spawnedEnemies = "\nCurrently spawned enemies (%s):\n%s".format(totalEnemies, world.enemiesToString())
+  println( spawnedEnemies )
 
-
-  val potion = new Potion("Potion of super heals", 150)
+  //val potion = new Potion("Potion of super heals", 150)
   //println(potion.toString())
 
 }
